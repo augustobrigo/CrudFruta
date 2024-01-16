@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
 
-     <div class="col-lg-6">
+     <div class="col-lg-6 col-md-12 col-xs-12">
       <table class="table table-bordered">
         <thead>
           <tr>
@@ -24,14 +24,14 @@
           <td>{{f.unidades}}</td>
           <td><img src={{f.imagen}} alt="" width="100" height="80"></td>
           <td><button (click)="eliminar(f.id)" class="btn btn-danger btn-md m-2">Eliminar</button></td>
-          <td><button (click)="seleccionar(f)" class="btn btn-info btn-md m-2">Seleccionar</button></td>
+          <td><button (click)="seleccionar(f)" class="btn btn-success btn-md m-2">Seleccionar</button></td>
 
          </tr>
         </tbody>
       </table>
 
      </div>
-     <div class="col-lg-6">
+     <div class="col-lg-6 col-md-12 col-xs-12">
       <form #f = "ngForm">
         <div class="form-group">
           <label for="id">ID</label>
@@ -58,9 +58,10 @@
           <input type="text" class="form-control" id="imagen" name="imagen" placeholder="Enter imagen"[(ngModel)] = "selectedProduct.imagen">
 
         </div>
+
+        <input type="button" class="btn btn-info m-2" (click)="crearProducto()" value="Crear Productos">
+        <input type="button" class="btn btn-primary m-2" (click)="actualizarProducto()" value="Actualizar Productos">
       </form>
-        <input type="button" class="btn btn-info ml-2" (click)="crearProducto()" value="Crear Productos">
-        <input type="button" class="btn btn-primary ml-2" (click)="actualizarProducto()" value="Actualizar Productos">
       </div>
      </div>
   </div>
